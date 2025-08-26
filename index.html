@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="The Grill on Main has been serving the Mercer County community since 2006. We have a large selection of fresh seafood, unique entrees, and a variety of draft beer. Dine in with us or order online today!">
+    <!-- avoid using a single meta description tag across all of your site's pages or a large group of pages. https://developers.google.com/search/docs/fundamentals/seo-starter-guide -->
+    <meta name="author" content="Marti Rosenbeck">
+    <meta name="keywords"
+        content="Grill on Main, Restaurant, Family Diner, Fresh Seafood, Large Selection of Seafood, Tenessee Chicken, Chicken, Ohio Restaurant, Coldwater Ohio, Mercer County, Online Ordering, InstantOrder Online Ordering, Restaurant Online Ordering With InstantOrder">
+    <title>The Grill on Main | Coldwater, Ohio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="body-home">
+        <div id="welcome-background">
+            <header>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#body-contact">Contact</a></li>
+                        <li><a href="#body-menu">Menu</a></li>
+                        <li><a href="https://order.grillonmain.net/menu" target="_blank">Order Online</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="banner"></div>
+            <h1>Grill on Main Menu</h1>
+            <!-- Toggle button -->
+            <div class="toggle-container">
+                <input type="checkbox" id="toggleButton">
+                <label for="toggleButton" class="toggle-label">
+                    <span class="sun-moon-icon"></span>
+                </label>
+            </div>
+            <section id="welcome">
+                <h2>The Grill <br>on Main</h2>
+                <div id="product-display">
+                    <!-- Product 1: Tennessee Chicken -->
+                    <img id="product-image-1" src="images/TennesseChicken2.png" alt="Tennessee Chicken">
+                    <div id="tennesseeChicken">
+                        <h3 id="product-name-1">Tennessee Chicken</h3>
+                        <p id="product-description-1">Our most popular menu item! The Tennessee Chicken is a tenderized
+                            chicken breast breaded in our house breading, then baked in the oven and topped with
+                            mozzarella and bacon.</p>
+                    </div>
+                    <!-- Product 2: Barramundi -->
+                    <img id="product-image-2" src="images/barramundi.jpg" alt="Barramundi" style="display: none;">
+                    <h3 id="product-name-2" style="display: none;">Barramundi</h3>
+                    <p id="product-description-2" style="display: none;">Fresh Barramundi, seasoned and grilled to
+                        perfection.</p>
+                    <!-- Product 3: Big Pig -->
+                    <img id="product-image-3" src="images/bigPig.jpg" alt="Big Pig" style="display: none;">
+                    <h3 id="product-name-3" style="display: none;">Big Pig</h3>
+                    <p id="product-description-3" style="display: none;">For the hearty appetite! The Big Pig is
+                        identical to the Tennessee, but we swap out chicken for a freshly tenderized pork loin.</p>
+
+                    <div id="product-controls">
+                        <button id="productButton1">TENNESSEE CHICKEN</button>
+                        <button id="productButton2">BARRAMUNDI</button>
+                        <button id="productButton3">BIG PIG</button>
+                    </div>
+                </div>
+                <p>check out our</p>
+                <a href="#body-menu" class="menu-button">MENU</a>
+                <p>for more delicious meals</p>
+            </section>
+        </div>
+        <section id="about">
+            <div id="about-content">
+                <h2>About Us</h2>
+                <p>
+                    <span class="special-text">The Grill on Main</span> is a place where you can enjoy a great meal and
+                    a great
+                    night with friends and family.
+                    Since
+                    our establishment in 2003, our mission has been to serve our small community of Coldwater, Ohio. for
+                    fundraisers, providing meals for high school athletic teams, or simply giving locals a friendly
+                    face, we do it
+                    for you! We are famous for our Tennessee Chicken, as well as having the most extensive seafood menu
+                    in Mercer
+                    County. Enjoy your next meal at The Grill on Main, where the food is so great, you'll scrape your
+                    plate!
+                </p>
+            </div>
+        </section>
+        <section id="daily-specials">
+            <h2>Daily Specials</h2>
+            <div id="specials-content">
+                <h3>Burger, Beer, and Fries Thursdays!</h3>
+                <p>Get a Lou Brunswick Burger with fries and a 16oz. domestic draft beer for only $12.95!
+                    <br>Thursdays from 4-8 pm
+                </p>
+                <h3>Free Appetizer Sundays! </h3>
+                <p>Get a free appetizer with the purchase of any entree! (one free app per table)
+                    <br>Sundays from 11 am-7 pm
+                </p>
+                <div id="img-gallery">
+                    <img src="images/thursdayhamburgerspecial.jpg" alt="hamburger and fries">
+                    <img src="images/MushroomChipscopy.jpg" alt="mushroom chips">
+                    <img src="images/PickleChipscopy.jpg" alt="pickle chips">
+                    <img src="images/BuffaloBreadcopy.jpg" alt="buffalo bread">
+                </div>
+            </div>
+        </section>
+        <section id="body-menu">
+            <h2>Grill on Main Menu</h2>
+            <div id="main-menu">
+                <!-- Appetizers Section -->
+                <section id="appetizer-section">
+                    <h3>Appetizers</h3>
+                    <div class="menu-item-container">
+                        <div class="menu-item">
+                            <h4>Mushroom Chips</h4>
+                            <p>fresh sliced white button mushrooms breaded & fried to perfection</p>
+                            <p class="menu-item-price">$5.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Pickle Chips</h4>
+                            <p>a heaping handful of sliced pickles hand breaded & fried to perfection</p>
+                            <p class="menu-item">$5.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Mini Tacos</h4>
+                            <p>10 miniature tacos fried & served with salsa <br>+ sour cream: $0.50</p>
+                            <p class="menu-item">$5.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Cheesy Garlic Bread</h4>
+                            <p>baked garlic bread topped w/ mozzarella cheese & served w/ marinara sauce</p>
+                            <p class="menu-item">$5.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Buffalo Bread</h4>
+                            <p>baked bread with ranch & our house buffalo. Topped w/ mozzarella cheese & served w/ ranch
+                            </p>
+                            <p class="menu-item">$5.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Chicken Chunks</h4>
+                            <p>1/2 lb. of fresh chicken chunks hand breaded, fried & tossed w/ the sauce of your choice
+                            </p>
+                            <p class="menu-item">$8.95</p>
+                            <p>Sauces:</p>
+                            <p>Mild / Medium / Hot / BBQ / Garlic Parm / Buffalo Garlic Parm / Sweet Chili / Southern /
+                                Sweet
+                                Teriyaki / Mango Habanero</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Large Salads Section -->
+                <section id="salads-section">
+                    <h3>Large Salads</h3>
+                    <div class="menu-item-container">
+                        <div class="menu-item">
+                            <h4>Blackened Chicken Salad</h4>
+                            <p>a heaping bowl of lettuce topped w/ mozzarella cheese, cherry tomatoes, croutons & fresh
+                                chicken
+                                baked w/ cajun seasonings</p>
+                            <p>$9.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Soutwest Chicken Salad</h4>
+                            <p>a heaping bowl of lettuce topped w/ cheddar cheese, cherry tomatoes, onion, black olives,
+                                croutons & freshly grilled chicken</p>
+                            <p>$9.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Grilled Chicken Salad</h4>
+                            <p>a heaping bowl of lettuce topped w/ mozzarella cheese, tomatoes, croutons & freshly
+                                grilled
+                                chicken</p>
+                            <p>$9.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Dressings</h4>
+                            <p>house-made: french / poppy seed / bleu cheese / southwest / thousand island</p>
+                            <p>classic: ranch / italian / honey mustard / ceasar</p>
+                            <p>fat-free: raspberry vinaigrette / ranch</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Wraps Section -->
+                <section id="wraps-section">
+                    <h3>Wraps</h3>
+                    <div class="menu-item-container">
+                        <div class="menu-item">
+                            <h4>Buffalo Chicken Wrap</h4>
+                            <p>freshly grilled buffalo chicken, ranch, lettuce, cheddar & mozzarella wrapped in a 12"
+                                tortilla
+                                shell</p>
+                            <p>*served with fries or chips</p>
+                            <p>$8.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Chicken Bacon Ranch Wrap</h4>
+                            <p>freshly grilled chicken, bacon, ranch, lettuce, cheddar & mozzarella wrapped in a 12"
+                                tortilla
+                                shell</p>
+                            <p>*served with fries or chips</p>
+                            <p>$8.95</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pizza & Flatbreads Section -->
+                <section id="pizza-section">
+                    <h3>Pizza & Flatbreads</h3>
+                    <div class="menu-item-container">
+                        <div class="menu-item">
+                            <h4>6" Pizza</h4>
+                            <p>TOPPINGS: Pepperoni / Sausage / Bacon / Onion / Green Pepper / Banana Pepper / Black
+                                Olives /
+                                Mushroom / Tomatoes / Jalapeno</p>
+                            <p>$4.95</p>
+                            <p>+ $0.50 per item</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Spicy Italian Flatbread</h4>
+                            <p>Italian dressing, pizza sauce, mozzarella cheese, pepperoni, sausage & jalapenos on a
+                                thin-crust
+                                flatbread</p>
+                            <p>$11.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Supreme Flatbread</h4>
+                            <p>pepperoni, sausage, mozzarella cheese, pizza sauce, onion, mushroom & green peppers on a
+                                thin-crust flatbread</p>
+                            <p>$11.95</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Sandwiches & Subs Section -->
+                <section id="subs-section">
+                    <h3>Sandwiches & Subs</h3>
+                    <div class="menu-item-container">
+                        <div class="menu-item">
+                            <h4>Lou Brunswick Burger</h4>
+                            <p>1/2 lb. of fresh hamburger patty seasoned in house & cooked to your temp</p>
+                            <p>served on a toasted brioche bun</p>
+                            <p>+ Cheese & Bacon $0.50 each</p>
+                            <p>$10.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Pizza Sub</h4>
+                            <p>pepperoni, mushroom, sausage, pizza sauce & mozzarella cheese</p>
+                            <p>baked on an 8" hoagie bun</p>
+                            <p>$8.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Large Tenderloin</h4>
+                            <p>a giant fresh pork tenderloin tenderized, breaded & fried in-house</p>
+                            <p>served on a toasted sub bun</p>
+                            <p>+ Cheese $0.50</p>
+                            <p>$9.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Steak Hoagie Sub</h4>
+                            <p>grilled hoagie patty w/ pizza sauce & mozzarella cheese</p>
+                            <p>baked on an 8" hoagie bun</p>
+                            <p>$8.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Chef Lee's Fish Sandwich</h4>
+                            <p>2 pieces of fresh pollock breaded & fried in-house</p>
+                            <p>served on a toasted sub bun w/ tarter on the side</p>
+                            <p>+ Cheese $0.50</p>
+                            <p>$10.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Chicken Bacon Ranch Sub</h4>
+                            <p>fresh grilled chicken w/ ranch, bacon & mozzarella cheese</p>
+                            <p>baked on an 8" hoagie bun</p>
+                            <p>$8.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Pizza Burger</h4>
+                            <p>2 beef patties stuffed w/ mozzarella cheese</p>
+                            <p>served on a toasted brioche bun</p>
+                            <p>$6.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Chicken Club Sub</h4>
+                            <p>fresh grilled chicken w/ mayo, mozzarella, tomato & lettuce</p>
+                            <p>baked on an 8" hoagie bun</p>
+                            <p>$8.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Chicken Breast Sandwich</h4>
+                            <p>1/2 lb. grilled chicken breast lightly seasoned served on a toasted brioche bun</p>
+                            <p>$9.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Buffalo Chicken Sub</h4>
+                            <p>fresh grilled chicken tossed in buffalo sauce w/ ranch & mozzarella cheese</p>
+                            <p>baked on an 8" hoagie bun</p>
+                            <p>$8.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Breaded Chicken Sandwich</h4>
+                            <p>1/2 lb. hand-breaded chicken breast served on a toasted brioche bun</p>
+                            <p>$9.95</p>
+                        </div>
+                    </div>
+                    <p class="section-note">ALL SANDWICHES ARE SERVED WITH FRIES OR CHIPS</p>
+                    <p class="section-note">ALL SUBS ARE SERVED W/ CHIPS</p>
+                </section>
+                <!-- Entrees Section -->
+                <section id="entrees-section">
+                    <h3>Entrees</h3>
+                    <div class="menu-item-container">
+                        <div class="menu-item">
+                            <h4>4 Piece Chicken</h4>
+                            <p>4 piece chicken dinner<br>choice of fried, baked, or blackened</p>
+                            <p>$12.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Tennessee Chicken</h4>
+                            <p>lightly breaded fresh chicken breast smothered with mozzarella & bacon</p>
+                            <p>southern sauce on side</p>
+                            <p>Half: $12.95</p>
+                            <p>Whole: $16.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Chicken Strips</h4>
+                            <p>fresh hand-breaded fried chicken strips</p>
+                            <p>$11.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Ohio's Best Pork Chop</h4>
+                            <p>lightly breaded fresh pork chop cut in house</p>
+                            <p>One Chop: $14.95</p>
+                            <p>Two Chops: $18.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Liver & Onions</h4>
+                            <p>two pieces of liver topped w/ sautéed onions</p>
+                            <p>$12.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Big Pig</h4>
+                            <p>lightly breaded tenderized pork smothered with mozzarella & bacon</p>
+                            <p>sweet chili sauce on side</p>
+                            <p>$14.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Dave Esser Hamburger Steak</h4>
+                            <p>1 lb. of fresh seasoned hamburger topped w/ sautéed mushrooms & onions</p>
+                            <p>$16.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Bourbon Steak Special</h4>
+                            <p>10 oz. sirloin steak marinated in Jim Beam Bourbon</p>
+                            <p>$22.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>King's Special</h4>
+                            <p>Surf & Turf combo with Barramundi & Bourbon Steak</p>
+                            <p>$29.95</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Fresh Seafood Section -->
+                <section id="seafood-section">
+                    <h3>Fresh Seafood</h3>
+                    <div class="menu-item-container">
+                        <div class="menu-item">
+                            <h4>Buck's Famous Fish</h4>
+                            <p>4 pieces of fresh pollock<br>choice of fried, baked, or blackened</p>
+                            <p>$12.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>New Orleans Seafood Special</h4>
+                            <p>fresh grilled tilapia topped w/ 3 jumbo butterfly shrimp & our New Orleans Sauce</p>
+                            <p>$18.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Tilapia</h4>
+                            <p>2 pieces of fresh tilapia<br>choice of fried, baked, or blackened</p>
+                            <p>$13.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Stuffed Flounder Special</h4>
+                            <p>fresh flounder (grilled or blackened) stuffed w/ a crab cake</p>
+                            <p>$25.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Butterfly Shrimp</h4>
+                            <p>fresh jumbo shrimp cut in-house<br>choice of fried, baked, or blackened</p>
+                            <p>$15.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Bay of Fundy Salmon</h4>
+                            <p>choice of baked or blackened</p>
+                            <p>$18.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Barramundi</h4>
+                            <p>choice of baked or blackened</p>
+                            <p>$18.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Mahi Mahi</h4>
+                            <p>choice of baked or blackened</p>
+                            <p>$17.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>8 oz Swordfish</h4>
+                            <p>choice of baked or blackened</p>
+                            <p>$21.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Red Snapper</h4>
+                            <p>choice of baked or blackened</p>
+                            <p>$19.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Flounder</h4>
+                            <p>choice of baked or blackened</p>
+                            <p>$16.95</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Catfish</h4>
+                            <p>choice of fried, baked, or blackened</p>
+                            <p>$12.95</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="menu-specials-sides-container">
+                    <!-- Daily Specials Section -->
+                    <section class="daily-specials-section">
+                        <h3>Daily Specials</h3>
+                        <div class="specials-sides-content">
+                            <div class="menu-item">
+                                <h4>Thursday</h4>
+                                <p>Lou Brunswick Burger & Fries!</p>
+                                <p>Plain 1/2 burger with fries and a 16 oz. domestic draft beer for only $12.95</p>
+                            </div>
+                            <div class="menu-item">
+                                <h4>Sunday</h4>
+                                <p>Free appetizer with the purchase of any entree!</p>
+                                <p>One appetizer per table</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Sides Section -->
+                    <section class="sides-section">
+                        <h3>Sides</h3>
+                        <div class="specials-sides-content">
+                            <div class="menu-item">
+                                <h4>All Entrees come with 2 sides</h4>
+                                <p>Broccoli / Steamed Vegetables / French Fries / Onion Rings / Red Skin Mashed Potatoes
+                                    / Mac &
+                                    Cheese
+                                    / Buttered Potatoes / Baked Potato / Mashed Sweet Potato / Tossed Salad / Applesauce
+                                    / Cottage Cheese / Coleslaw /
+                                    Steamed
+                                    Baby Carrots</p>
+                                <p class="section-note">Extra Side $2.95</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section id="body-contact">
+            <h2>Grill on Main Contact</h2>
+            <div class="flex-container">
+                <div id="inner-flex-container">
+                    <section id="contact-us">
+                        <h3>Contact Us</h3>
+                        <p>If you have any questions or would like to make a reservation, please don't hesitate to
+                            reach
+                            out. You can call us at <a href="tel:+14196782656">419-678-2656</a> or fill out the
+                            contact form. Thank you for
+                            considering The Grill on Main; we look forward to giving you a memorable dining
+                            experience!
+                        </p>
+                    </section>
+                    <div id="inner-inner-flex">
+                        <section id="hours">
+                            <h3>Hours</h3>
+                            <p>Wednesday | 4 PM - 8 PM<br>
+                                Thursday | 4 PM - 8 PM<br>
+                                Friday | 4 PM - 9 PM<br>
+                                Saturday | 4 PM - 9 PM<br>
+                                Sunday | 11 AM - 7 PM<br>
+                                Closed Mondays & Tuesdays</p>
+                        </section>
+                        <section id="location">
+                            <h3>Location</h3>
+                            <p>222 West Main St.<br>Coldwater, OH</p>
+                            <div class="map-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.7853880107727!2d-84.63324312491471!3d40.48001265178682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883fcaed8c75eaf7%3A0xfa7b10dbe3b214ba!2sThe%20Grill%20on%20Main!5e0!3m2!1sen!2sus!4v1691767690024!5m2!1sen!2sus"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </section>
+                    </div> <!-- inner inner flex end -->
+                </div> <!-- inner flex container end -->
+                <div id="contact-form-container">
+                    <h3>Contact Form</h3>
+                    <form id="contact-form">
+                        <!-- Full Name -->
+                        <div class="form-field">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <!-- Phone Number -->
+                        <div class="form-field">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+                        </div>
+                        <!-- Email Address -->
+                        <div class="form-field">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <!-- Comments -->
+                        <div class="form-field">
+                            <label for="comments">Comments:</label>
+                            <textarea id="comments" name="comments" required></textarea>
+                        </div>
+                        <!-- Preferred Contact Method -->
+                        <div class="form-field">
+                            <fieldset>
+                                <legend>Preferred Contact Method:</legend>
+                                <input type="radio" id="contactEmail" name="contactMethod" value="email" required>
+                                <label for="contactEmail">Email</label>
+                                <input type="radio" id="contactPhone" name="contactMethod" value="phone" required>
+                                <label for="contactPhone">Phone</label>
+                            </fieldset>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="form-field">
+                            <button type="submit">SUBMIT</button>
+                        </div>
+                    </form>
+                    <div id="confirmation-message"></div>
+                </div> <!-- form container end    -->
+            </div> <!-- flex container end -->
+        </section>
+        <section id="guessingGame">
+            <h2>Guessing Game</h2>
+            <div id="flex1">
+                <h3>Guessing Game</h3>
+                <p>Love takeout? Guess the number correctly and win a 10% off coupon for your next order placed online!
+                </p>
+                <!-- Input field for user's guess -->
+                <label for="userGuess">Enter a number (1-10): </label>
+                <input type="number" id="userGuess" min="1" max="10">
+
+                <!-- Button to trigger the game -->
+                <button id="playButton">Play</button>
+            </div>
+            <div id="flex2">
+                <!-- Display area for results -->
+                <p id="instructionText">Play now!<br>We will generate a random number.<br>If your number matches, you
+                    win!</p>
+                <p id="resultMessage"></p>
+                <p id="errorMessage" class="error-message"></p>
+            </div>
+        </section>
+        <footer>
+            <h2>Footer</h2>
+            <!-- Wrap the Facebook icon with an anchor tag -->
+            <a href="https://www.facebook.com/TheGrillonMainCW/" target="_blank">
+                <img class="facebook-icon" src="images/facebook-logo.png" alt="Facebook Icon">
+            </a>
+            <div class="contact-info">
+                <p><a href="https://goo.gl/maps/1swjdxKgeLaWyCQJ6" target="_blank">222 WEST MAIN STREET, COLDWATER, OHIO
+                        45828</a></p>
+                <p><a href="tel:+14196782656">419-678-2656</a> | <a
+                        href="mailto:mainstreet222@gmail.com">mainstreet222@gmail.com</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,993 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@300;400;500&family=Liu+Jian+Mao+Cao&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* WELCOME */
+#welcome-background {
+  position: relative;
+  background-image: url("images/rustic-weathered-wooden-background.png"); /* image source Adobe Stock. Stock ID: 401061075	Author: Dmytro */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Add a pseudo-element to create the shadow overlay */
+#welcome-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#body-home h1 {
+  display: none;
+}
+
+#body-home h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.image-container,
+#welcome p,
+.menu-button {
+  z-index: 1;
+}
+
+/* light/dark mode button */
+#toggleButton {
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+.toggle-container {
+  position: relative;
+}
+
+.toggle-label {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: rgb(211, 209, 209); 
+  border-radius: 15px; 
+  position: relative;
+  left: 82%;
+  cursor: pointer;
+}
+
+.sun-moon-icon {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff; 
+  top: 50%;
+  left: 12px; 
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+/* Adjust the sun and moon icon position when toggled to dark mode */
+#toggleButton:checked + .toggle-label .sun-moon-icon {
+  left: calc(100% - 30px + 5px); /* Move the icon to the right when toggled to dark mode */
+}
+
+.sun-moon-icon::before {
+  content: '\2600'; 
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+  color: #fdd835;
+}
+
+/* Adjust the appearance based on the checkbox state (checked or unchecked) */
+#toggleButton:checked + .toggle-label {
+  background-color: #333; /* Background color when toggled to dark mode */
+}
+
+#toggleButton:checked + .toggle-label .sun-moon-icon {
+  left: calc(100% - 5px); 
+}
+
+#toggleButton:checked + .toggle-label .sun-moon-icon::before {
+  content: '\1F319'; 
+  color: #607d8b; 
+}
+
+#banner {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(255, 244, 230);;
+  position: relative;
+  top: -60px;
+  z-index: 1;
+}
+
+/* Light/Dark Mode Styles */
+/* Dark mode styles for the banner */
+#banner {
+  background-color: rgb(26, 26, 26); /* Dark mode banner background color */
+}
+.dark-mode #navMenu li a {
+  color: #fff; /* Set the text color to white in dark mode */
+}
+
+/* Light mode styles for the banner */
+body:not(.dark-mode) #banner {
+  background-color: #fff; /* Light mode banner background color */
+}
+.light-mode #navMenu li a {
+  color: #000000b6; /* Set the text color to black in light mode */
+}
+
+/* Dark mode styles for the menu */
+.dark-mode #body-menu {
+  background-color: #000; /* Set the background color to black in dark mode */
+}
+.dark-mode #body-menu h3,
+.dark-mode .menu-item h4,
+.dark-mode .menu-item p,
+.dark-mode .section-note {
+  color: #fff; /* Set the text color for h2 elements in dark mode */
+}
+
+/* Light mode styles for the menu */
+.light-mode #body-menu {
+  background-color: #f9f9f9; /* Set the background color to white in light mode */
+}
+.light-mode #body-menu h3,
+.light-mode.menu-item h4,
+.light-mode.menu-item p,
+.light-mode.section-note {
+  color: #000000b6; /* Set the text color for h2 elements in light mode */
+} 
+
+/* Dark mode styles for the contact form */
+.dark-mode #contact-form-container {
+  background-color: #000; /* Set the background color to black in dark mode */
+}
+.dark-mode #contact-form-container h3 {
+  color: #fff; /* Set the text color to white in dark mode */
+}
+.dark-mode #contact-form label {
+  color: #fff; /* Set the text color to white in dark mode */
+}
+.dark-mode #contact-form-container button:hover {
+  background-color: #9a0000; 
+}
+.dark-mode #confirmation-message {
+  color: #fff;
+}
+
+/* Dark mode styles for guessing game */
+.dark-mode #guessingGame {
+  background-color: #000;
+  color: #fff;
+}
+.dark-mode #guessingGame h3 {
+  color: #fff;
+}
+.dark-mode #guessingGame p {
+  color: #fff;
+}
+.dark-mode #guessingGame #resultMessage {
+  color: #fff;
+}
+
+
+#welcome {
+  margin-top: 6rem;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15%;
+  margin-bottom: -7%;
+}
+
+#welcome h2 {
+  font-size: 4rem;
+  padding-bottom: 1em;
+}
+
+#welcome p {
+  font-family: 'Liu Jian Mao Cao', 'Lato', serif;
+  color: #fff;
+  font-size: 3rem;
+  padding: .5em;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-button {
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #470f0f;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 1rem;
+}
+
+.menu-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Product Display */
+#product-display {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+#product-name {
+  color: #333;
+}
+
+#product-description {
+  color: #666;
+}
+
+#product-display h3 {
+  font-size: 1.5em;
+  font-family: "Lato", sans-serif;
+  line-height: 2em;
+  color: #fff;
+  margin: 0 0 5px 0;
+  text-align: left;
+  position: relative;
+  left: .3em;
+  top: .7em;
+}
+
+#product-display p {
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  line-height: 1.2em;
+  margin: 0;
+  text-align: left;
+}
+
+#product-controls {
+  margin: 20px 0 40px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Style for hidden products */
+#product-name-2,
+#product-name-3,
+#product-description-2,
+#product-description-3,
+img[alt="Barramundi"],
+img[alt="Big Pig"] {
+  display: none;
+}
+
+#product-display img {
+  max-width: 100%; 
+  height: auto;    
+}
+
+#tennesseeChicken {
+  display: flex;
+  flex-direction: column;
+}
+
+#product-controls button {
+  background-color: #470f0f;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  margin: .5em;
+  font-size: 1em;
+}
+
+#product-controls button:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+/* ABOUT */
+#about h2 {
+  display: none;
+}
+
+#about {
+  background-image: url("images/BeerTap.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 100%;
+  min-height: 20rem;
+  padding: 10em;
+  position: relative;
+  margin-bottom: -1em;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.68);
+  z-index: 1;
+}
+
+#about-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+  color: #fff;
+}
+
+#about-content .special-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+}
+
+#about p {
+  font-weight: 500;
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+/* DAILY SPECIALS */
+#daily-specials {
+  background-image: url("images/rustic-weathered-wooden-background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+#daily-specials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#daily-specials h2 {
+  font-family: 'Liu Jian Mao Cao', 'Lato', serif;
+  font-weight: 300;
+  font-size: 3.5rem;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  position: relative; 
+  z-index: 1;
+}
+
+#daily-specials h2::after {
+  content: "";
+  position: absolute;
+  bottom: .9em;
+  left: 50%;
+  width: 5em;
+  display: inline-block;
+  border-bottom: 1.5px solid #fff;
+  transform: translateX(-50%);
+}
+
+#specials-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+#specials-content h3 {
+font-size: 1.2rem;
+line-height: 120%;
+padding-bottom: .5em;
+z-index: 1;
+}
+
+#specials-content p {
+font-weight: 300;
+line-height: 130%;
+padding-bottom: 2em;
+z-index: 1;
+}
+
+#img-gallery {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2%;
+  padding: 2em;
+  z-index: 1;
+}
+
+/* MENU */
+#body-menu h2 {
+  display: none;
+}
+
+#body-menu h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 4rem 0;
+}
+
+#body-menu {
+  padding-top: 2rem;
+  background-color: #f9f9f9;
+  margin-top: -1em;
+}
+
+#appetizer-section {
+  margin-top: 10px;
+}
+
+.menu-item-container {
+  padding-left: 5rem;
+}
+
+.menu-item {
+  min-width: 50%;
+  margin-bottom: 20px;
+}
+
+.menu-item h4 {
+  font-size: .75rem;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: bold;
+  color: #000;
+}
+
+.menu-item p {
+  font-size: .75rem;
+  font-family: "Libre Franklin", sans-serif;
+  color: #000;
+  line-height: 1.5;
+}
+
+.section-note {
+  font-size: .5rem;
+  font-family: "Libre Franklin", sans-serif;
+  color: #000;
+}
+
+.section-note:nth-of-type(2) {
+  padding-bottom: 40px;
+}
+
+#appetizer-section p:nth-of-type(3) {
+  font-weight: 500;
+}
+
+.specials-sides-content {
+  padding-left: 5.5rem;
+}
+
+/* background */
+#body-menu header {
+  background-image: url("images/rustic-weathered-wooden-background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 100px;
+}
+
+/* body styles */
+#main-menu {
+  margin: 6vw 10vw;
+}
+
+.menu-item-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+#main-menu section {
+  text-align: center;
+}
+
+.menu-item {
+  text-align: left;
+}
+
+.menu-specials-sides-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.daily-specials-section,
+.sides-section {
+  text-align: center;
+}
+
+.daily-specials-section .menu-item,
+.sides-section .menu-item {
+  text-align: left;
+}
+
+/* CONTACT */
+#body-contact h2 {
+  display: none;
+}
+
+#body-contact {
+  position: relative;
+  background-image: url("images/rustic-weathered-wooden-background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+#body-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#body-contact h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 4rem 0;
+}
+
+#body-contact p {
+  color: #fff;
+}
+
+#contact-us a {
+  text-decoration: none;
+  color: #ffffff; 
+}
+
+#contact-us a:hover {
+  color:#470f0f;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  padding: 0% 10% 0% 10%;
+}
+
+#inner-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+#inner-inner-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-top: 6em;
+}
+
+#contact-us, #hours, #location {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+#hours {
+  padding-right: 45px;
+}
+
+#location {
+  position: relative;
+  bottom: 12px;
+}
+
+#contact-us h3,
+#hours h3,
+#location h3,
+#contact-us p,
+#hours p,
+#location p {
+    margin-bottom: 1em; 
+    line-height: 1.5;
+    z-index: 1;
+}
+
+#contact-us p {
+  padding: 0 50px;
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  padding-top: 50%;
+  left: 20px;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* contact form */
+#contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  z-index: 2;
+  position: relative;
+  margin: 100px auto;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+#contact-form-container h3 {
+  color: #333;
+  text-align: center;
+  margin: 1em;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-field input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contactEmail{
+  position: relative;
+  top: 20px;
+}
+
+#contactPhone{
+  position: relative;
+  top: 20px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-field button {
+  background-color: #470f0f;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2em;
+}
+
+button:hover {
+  background-color: #000;
+}
+
+#confirmation-message {
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4em;
+}
+
+.error-message {
+  color: #FF0000;
+  font-size: 1rem;
+  display: block;
+  margin-top: 5px;
+}
+
+
+/* GUESSING GAME */
+#guessingGame h2 {
+  display: none;
+}
+
+#guessingGame {
+  padding: 20px;
+  background-color: #f9f9f9;
+  padding: 5rem;
+  display: flex;
+  text-align: left;
+  justify-content: space-evenly;
+}
+
+#guessingGame h3 {
+  color: #000;
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  font-weight: 600;
+}
+
+#guessingGame p {
+  color: #000;
+  line-height: 2em;
+  padding-bottom: 1em;
+  padding-right: 2em;
+}
+
+#guessingGame label {
+  margin-right: 10px;
+}
+
+#guessingGame input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#guessingGame button {
+  padding: 8px 16px;
+  background-color: #470f0f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#guessingGame button:hover {
+  background-color: #000;
+}
+
+#guessingGame #resultMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #000;
+}
+
+#guessingGame #resultMessage a {
+text-decoration: none;
+color: #FF0000;
+}
+
+#flex1,
+#flex2 {
+  width: 50%;
+}
+
+#flex2 {
+  position: relative;
+  top: 40px;
+}
+
+/* FOOTER */
+footer h2 {
+  display: none;
+}
+
+footer {
+  position: relative;
+  background-image: url("images/rustic-weathered-wooden-background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 13vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.facebook-icon {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.contact-info {
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+  z-index: 2;
+  position: relative;
+  top: 1.3em;
+  line-height: 1.5;
+}
+
+.contact-info p {
+  font-size: .6rem;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.contact-info a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 460px) {
+  #navMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 460px) {
+  #menuToggle {
+    display: none;
+  }
+
+  #navMenu {
+    display: flex;
+    list-style: none;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  #navMenu li {
+    margin-right: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+
+  }
+
+  #navMenu li:last-child {
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 8%;
+  }
+
+  #navMenu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+  }
+}
+
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    html {
+      font-size: 20px;
+    }
+
+    .menu-specials-sides-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item {
+      min-width: 50%;
+      max-width: 70%;
+    }
+
+    #main-menu {
+      margin: 0 20%;
+    }
+  }
